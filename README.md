@@ -8,3 +8,18 @@
 ![image](https://github.com/RESMIRNAIR/DEMULTIPLEXER1TO4/assets/154305926/f48cc07d-c76f-4d1c-8907-11e99711b751)
 ![image](https://github.com/RESMIRNAIR/DEMULTIPLEXER1TO4/assets/154305926/a3075cf9-55ba-4478-b20c-c7128badef04)
 ![image](https://github.com/RESMIRNAIR/DEMULTIPLEXER1TO4/assets/154305926/e07386db-69b3-4a5f-945f-b38929b801ea)
+# Program
+```
+module demux(y0,y1,y2,y3,s1,s0,I);
+ input I,s0,s1;
+ output y0,y1,y2,y3;
+     assign s1n = ~ s1;
+     assign s0n = ~ s0;
+     assign y0 = I & s0n & s1n;
+     assign y1 = I & s0 & s1n;
+     assign y2 = I & s0n & s1;
+     assign y3 = I & s0 & s1;
+ endmodule
+```
+# OUTPUT
+![image](https://github.com/dhanushkumardev/DEMULTIPLEXER1TO4/assets/108728087/7ced258d-2427-4c06-aa67-aaf08e1a8de6)
